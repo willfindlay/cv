@@ -86,7 +86,7 @@
   pdftitle={},
   pdfauthor={},
   pdfsubject={},
-  pdfkeywords={}
+  pdfkeywords={},
 }
 
 
@@ -637,7 +637,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} R{1.5cm} L{\textwidth - 5.0cm} R{2.5cm}}
 }{%
     \end{tabular*}
   \end{center}
@@ -730,3 +730,33 @@
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
 }
+
+%-------------------------------------------------------------------------------
+%                Bibliography
+%-------------------------------------------------------------------------------
+%\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[ % BibLaTeX
+	sorting=ydnt, % Sorts entries by year (descending order), name, title
+	%style=verbose,
+	doi=true,
+	isbn=true,
+	url=true,
+	eprint=false,
+	backref = false, % include back references in bibliography
+	maxcitenames=3, % affects only the citations in the document body
+	maxbibnames=99, % affects only the bibliography, pass 99 to print all
+	hyperref=true,
+	block=none,
+	backend=biber % {Options: bibtex, biber}
+	]{biblatex}
+
+% Avoid splitting entries across page break (only for 3 or fewer lines)
+% Tip: http://tex.stackexchange.com/a/51261
+\AtBeginEnvironment{thebibliography}{%
+   \clubpenalty10000
+   \@clubpenalty \clubpenalty
+   \widowpenalty10000
+   \interlinepenalty5000
+   }
+
+\renewcommand*{\bibfont}{\footnotesize}

@@ -1,0 +1,108 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{1}
+  \datalist[entry]{ydnt/global//global/global}
+    \entry{findlay2020_bpfbox}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=640e2e798a5b5d6c1e2af79c23d5edd2}{%
+           family={Findlay},
+           familyi={F\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1789a11a791e330190b42ecd41aa6867}{%
+           family={Somayaji},
+           familyi={S\bibinitperiod},
+           given={Anil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c292d078989c3e4c0f33b0e893b6eb94}{%
+           family={Barrera},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Virtual Event, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{61f8016b443611194c8f65f2a31193d3}
+      \strng{fullhash}{61f8016b443611194c8f65f2a31193d3}
+      \strng{bibnamehash}{61f8016b443611194c8f65f2a31193d3}
+      \strng{authorbibnamehash}{61f8016b443611194c8f65f2a31193d3}
+      \strng{authornamehash}{61f8016b443611194c8f65f2a31193d3}
+      \strng{authorfullhash}{61f8016b443611194c8f65f2a31193d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2020 ACM SIGSAC Conference on Cloud Computing Security Workshop}
+      \field{series}{CCSW'20}
+      \field{title}{{bpfbox: Simple Precise Process Confinement with eBPF}}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{91\bibrangedash 103}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1145/3411495.3421358
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+
+\refsection{2}
+  \datalist[entry]{ydnt/global//global/global}
+    \entry{findlay2020_ebph}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=640e2e798a5b5d6c1e2af79c23d5edd2}{%
+           family={Findlay},
+           familyi={F\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Carleton University}%
+      }
+      \strng{namehash}{640e2e798a5b5d6c1e2af79c23d5edd2}
+      \strng{fullhash}{640e2e798a5b5d6c1e2af79c23d5edd2}
+      \strng{bibnamehash}{640e2e798a5b5d6c1e2af79c23d5edd2}
+      \strng{authorbibnamehash}{640e2e798a5b5d6c1e2af79c23d5edd2}
+      \strng{authornamehash}{640e2e798a5b5d6c1e2af79c23d5edd2}
+      \strng{authorfullhash}{640e2e798a5b5d6c1e2af79c23d5edd2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Not yet published as of December 9th, 2019}
+      \field{title}{{Host-Based Anomaly Detection with Extended BPF}}
+      \field{type}{Honours Thesis}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://williamfindlay.com/written/thesis.pdf
+      \endverb
+      \verb{url}
+      \verb https://williamfindlay.com/written/thesis.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

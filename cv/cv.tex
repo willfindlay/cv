@@ -48,6 +48,8 @@
 
 \usepackage{csquotes}
 
+\addbibresource{../william.bib}
+
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
@@ -59,7 +61,7 @@
 \position{Security Researcher{\enskip\cdotp\enskip}Kernel Hacker}
 %\address{}
 
-%\mobile{(+82) 10-9030-1843}
+\mobile{(613) 296-1240}
 \email{william@williamfindlay.com}
 \homepage{www.williamfindlay.com}
 \github{willfindlay}
@@ -77,13 +79,21 @@
 
 %\quote{``Be the change that you want to see in the world."}
 
+\hypersetup{
+  colorlinks=true,
+  urlcolor=awesome-skyblue,
+}
+
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader
+\begingroup
+  \hypersetup{urlcolor=.}
+  \makecvheader
+\endgroup
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
@@ -99,12 +109,14 @@
 %-------------------------------------------------------------------------------
 \input{content/education.tex}
 \input{content/skills.tex}
-\input{content/experience.tex}
-\input{content/extracurricular.tex}
-\input{content/honors.tex}
-\input{content/presentation.tex}
-\input{content/writing.tex}
-\input{content/committees.tex}
+\input{content/languages.tex}
+\input{content/academic-experience.tex}
+\clearpage
+\input{content/other-experience.tex}
+%\input{content/extracurricular.tex}
+\input{content/awards.tex}
+\input{content/talks.tex}
+\input{content/publications.tex}
 
 
 %-------------------------------------------------------------------------------
