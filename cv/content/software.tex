@@ -16,6 +16,21 @@
 
 %---------------------------------------------------------
   \cventry
+    {Experimental Container Security Mechanism using eBPF} % Quick description
+    {BPFContain} % Title
+    {} % Empty
+    {} % Empty
+    {
+      \begin{cvitems} % Description(s)
+        \item Designed and implemented a container security framework using eBPF programs and LSM hooks.
+        \item Tech stack for this project includes Rust, libbpf-rs, and eBPF\@.
+        \item BPFContain is the subject of ongoing research and development, and will be the topic of my 2021 Master's Thesis.
+        \item Full source code available: \url{https://github.com/willfindlay/bpfcontain-rs}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
     {eBPF-Based Process Confinement Mechanism} % Quick description
     {bpfbox} % Title
     {} % Empty
@@ -43,17 +58,17 @@
     }
 
 %---------------------------------------------------------
-  \cventry
-    {Experimental libbpf Bindings for Python} % Quick description
-    {pybpf} % Title
-    {} % Empty
-    {} % Empty
-    {
-      \begin{cvitems} % Description(s)
-        \item Designed and implemented an experimental eBPF framework for Python with support for CO-RE and libbpf bindings.
-        \item Full source code is available: \url{https://github.com/willfindlay/pybpf}.
-      \end{cvitems}
-    }
+  %\cventry
+  %  {Experimental libbpf Bindings for Python} % Quick description
+  %  {pybpf} % Title
+  %  {} % Empty
+  %  {} % Empty
+  %  {
+  %    \begin{cvitems} % Description(s)
+  %      \item Designed and implemented an experimental eBPF framework for Python with support for CO-RE and libbpf bindings.
+  %      \item Full source code is available: \url{https://github.com/willfindlay/pybpf}.
+  %    \end{cvitems}
+  %  }
 
 %---------------------------------------------------------
 \end{cventries}
@@ -80,14 +95,28 @@
         \item Regular contributor to a large open-source project.
         \item Implemented the following major features:
         \begin{itemize}
-          \item \href{https://github.com/iovisor/bcc/commit/fe730f29f14bef8b5ffe1112c578df876c44d22d}
-            {Support for the ringbuf eBPF map}
-          \item \href{https://github.com/iovisor/bcc/commit/9b82af3ef53bbae76d9f09f403b58975995aa900}
-            {Enhanced support for LSM probes}
-          \item \href{https://github.com/iovisor/bcc/commit/e70bbdcbcbcd01e5570ba7b9d79e282d16a53d40}
-            {Python support for stack and queue eBPF maps}
+          \item {Support for the ringbuf eBPF map}
+          \item {Enhanced support for LSM probes}
+          \item {Python support for stack and queue eBPF maps}
         \end{itemize}
         \item Full source code is available: \url{https://github.com/iovisor/bcc}.
+      \end{cvitems}
+    }
+
+  \cventry
+    {Rust Implementation of libbpf} % Quick description
+    {libbpf-rs} % Title
+    {} % Empty
+    {} % Empty
+    {
+      \begin{cvitems} % Description(s)
+        \item Implemented several major features to an open-source Rust project:
+        \begin{itemize}
+          \item {Support for the ringbuf eBPF map}
+          \item {Enhanced support for LSM probes}
+          \item {Bugfixes and general API improvements}
+        \end{itemize}
+        \item Full source code is available: \url{https://github.com/libbpf/libbpf-rs}.
       \end{cvitems}
     }
 
