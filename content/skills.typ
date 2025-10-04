@@ -7,7 +7,7 @@
   stroke: none,
   align: (right, left),
   column-gutter: 1em,
-  row-gutter: 0.5em,
+  row-gutter: -0.2em,
   ..cv-skill([Linux Kernel], [Kernel Hacking, Kernel Module Development, eBPF, XDP, bcc, libbpf]),
   ..cv-skill([Systems Programming], [C, C++, Rust]),
   ..cv-skill([Data Science], [Pandas, Numpy, Scipy, R]),

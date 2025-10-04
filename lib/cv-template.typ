@@ -52,7 +52,7 @@
     fill: color-graytext,
     firstname
   )
-  h(0.2em)
+  h(0.5em)
   text(
     size: 32pt,
     font: font-header,
@@ -226,7 +226,7 @@
     )
   )
 
-  v(0.5mm)
+  v(-0.7em)
 
   // Position/Date row
   grid(
@@ -259,7 +259,7 @@
     )
   }
 
-  v(3mm)
+  v(1.5em)
 }
 
 // ============================================================================

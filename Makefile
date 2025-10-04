@@ -1,22 +1,18 @@
-.PHONY: examples
+# Typst compiler
+TYPST := typst
 
-CC = xelatex
-EXAMPLES_DIR = examples
-RESUME_DIR = examples/resume
-CV_DIR = examples/cv
-RESUME_SRCS = $(shell find $(RESUME_DIR) -name '*.tex')
-CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
+# PDF targets (add more here as needed)
+PDFS := cv.pdf
 
-examples: $(foreach x, coverletter cv resume, $x.pdf)
+# Default target
+.PHONY: all
+all: $(PDFS)
 
-resume.pdf: $(EXAMPLES_DIR)/resume.tex $(RESUME_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
+# Pattern rule for building PDFs from .typ files
+%.pdf: %.typ lib/cv-template.typ content/*.typ
+	$(TYPST) compile $< $@
 
-cv.pdf: $(EXAMPLES_DIR)/cv.tex $(CV_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
-
-coverletter.pdf: $(EXAMPLES_DIR)/coverletter.tex
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
-
+# Clean generated files
+.PHONY: clean
 clean:
-	rm -rf $(EXAMPLES_DIR)/*.pdf
+	rm -f $(PDFS)
