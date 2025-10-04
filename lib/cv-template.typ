@@ -22,6 +22,12 @@
 #let font-awesome = "Font Awesome 7 Free Solid"
 
 // ============================================================================
+// State Variables
+// ============================================================================
+
+#let in-header = state("in-header", false)
+
+// ============================================================================
 // Utility Functions
 // ============================================================================
 
@@ -104,13 +110,13 @@
   }
 
   if social-items.len() > 0 {
-    show link: set text(fill: color-text)
+    in-header.update(true)
     text(
       size: 6.8pt,
       font: font-header,
-      fill: color-text,
-      social-items.join(" | ")
+      social-items.join(h(1em)+"|"+h(1em))
     )
+    in-header.update(false)
   }
 
   v(0mm)
@@ -364,8 +370,13 @@
   set par(justify: false, leading: 0.65em)
 
   // Link styling
-  show link: it => {
-    text(fill: color-awesome-skyblue, it)
+  show link: it => context {
+    // Check if we're currently in the header
+    if in-header.get() {
+      text(fill: color-text, it)
+    } else {
+      text(fill: color-awesome-skyblue, it)
+    }
   }
 
   doc
