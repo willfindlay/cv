@@ -19,6 +19,7 @@
 
 #let font-header = "Roboto"
 #let font-body = "Roboto"  // Fallback to Roboto (closest to Source Sans Pro)
+#let font-awesome = "Font Awesome 7 Free Solid"
 
 // ============================================================================
 // Utility Functions
@@ -26,6 +27,11 @@
 
 #let vhrulefill(height: 0.9pt, color: color-gray) = {
   line(length: 100%, stroke: height + color)
+}
+
+// Font Awesome icon helper
+#let fa-icon(unicode-code) = {
+  text(font: font-awesome, unicode-code)
 }
 
 // ============================================================================
@@ -78,26 +84,27 @@
   let social-items = ()
 
   if mobile != none {
-    social-items.push(link("tel:" + mobile, "☎ " + mobile))
+    social-items.push(link("tel:" + mobile, [#fa-icon("\u{f10b}") #mobile]))
   }
 
   if email != none {
-    social-items.push(link("mailto:" + email, "✉ " + email))
+    social-items.push(link("mailto:" + email, [#fa-icon("\u{f0e0}") #email]))
   }
 
   if homepage != none {
-    social-items.push(link("https://" + homepage, "⌂ " + homepage))
+    social-items.push(link("https://" + homepage, [#fa-icon("\u{f015}") #homepage]))
   }
 
   if github != none {
-    social-items.push(link("https://github.com/" + github, "■ " + github))
+    social-items.push(link("https://github.com/" + github, [#fa-icon("\u{f09b}") #github]))
   }
 
   if linkedin != none {
-    social-items.push(link("https://www.linkedin.com/in/" + linkedin, "■ " + linkedin))
+    social-items.push(link("https://www.linkedin.com/in/" + linkedin, [#fa-icon("\u{f0e1}") #linkedin]))
   }
 
   if social-items.len() > 0 {
+    show link: set text(fill: color-text)
     text(
       size: 6.8pt,
       font: font-header,
